@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ere Untzdag?</title>
+  <style>
+      @-webkit-keyframes background {
+        0%   { background: #000; }
+        100%  { background: #FFF; }
+      }
+
+      @keyframes background {
+        0%   { background: #000; }
+        100%  { background: #FFF; }
+      }
+
+      body {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      body.untzdag {
+        background-color: #F280A1;
+        -webkit-animation-name: background;
+        -webkit-animation-duration: 200ms;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-play-state: running;
+        animation-name: background;
+        animation-duration: 200ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-play-state: running;
+      }
+
+      h2 {
+        font-size: 110px;
+        font-size: 8vw;
+        margin-bottom: 0.3em;
+      }
+
+      h1 {
+        font-size: 180px;
+        font-size: 13vw;
+        margin: 0;
+      }
+
+
+      h1.yes {
+        display: none;
+      }
+
+      body.untzdag h1.yes {
+        display: block;
+      }
+
+      body.untzdag h1.no {
+        display: none;
+      }
+
+      h4 {
+        font-weight: normal;
+      }
+
+      h4 a {
+        color: white;
+      }
+
+      h4 span {
+        font-size: 110%;
+        font-weight: bold;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h2>Gott nytt untz år!</h2>
+    <h1 class="yes"></h1>
+
+    <audio id="audio">
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script type="text/javascript">
+      if(new Date().getDay() == 3) {
+        document.getElementsByTagName("body")[0].className = "untzdag"
+        document.getElementById('audio').play();
+      }
+    </script>
+  </body>
+</html>
