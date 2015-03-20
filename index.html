@@ -1,102 +1,66 @@
-<DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Ere Untzdag?</title>
-    <link rel="stylesheet" href="animate.css"/>
-  <style>
-      @-webkit-keyframes background {
-        0%   { background: #F280A1; }
-        100%  { background: #FFF; }
-      }
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="animation.css">
+<meta charset="UTF-8">
+<title>Ere untzdag?</title>
+</head>
+<body>
+<div id="default" style="display:none">
+	<div class="ereuntz">Ere untzdag?</div>
+	<div class="fuckno">FUCK NO!!</div>
+	<div id="date">Hej</div>
+</div>
+<div id="ons" style="display:none">
+	<div class="untz">untz</div>
+	<div class="ereuntz">Ere untzdag?</div>
+	<div class="fuckyes">FUCK YEAH!!</div>
+</div>
+	<audio id="audio">
+		<source src="skopal21.mp3" type="audio/mpeg">
+	</audio>
+	<script src="animation.js"></script>
+	<script src="countdown.js"></script>
+	<script type="text/javascript">
 
-      @keyframes background {
-        0%   { background: #000; }
-        100%  { background: #FFF; }
-      }
-
-      body {
-        background-color: black;
-        color: white;
-        text-align: center;
-        font-family: sans-serif;
-      }
-
-      body.untzdag {
-        background-color: #F280A1;
-        -webkit-animation-name: background;
-        -webkit-animation-duration: 200ms;
-        -webkit-animation-timing-function: linear;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-direction: alternate;
-        -webkit-animation-play-state: running;
-        animation-name: background;
-        animation-duration: 200ms;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-play-state: running;
-
-      }
-
-      h2 {
-        font-size: 110px;
-        font-size: 8vw;
-        margin-bottom: 0.3em;
-      }
-
-      h1 {
-        font-size: 180px;
-        font-size: 13vw;
-        margin: 0;
-      }
-
-
-      .yes {
-        display: none;
-      }
-
-      body.untzdag .yes {
-        display: block;
-      }
-
-      body.untzdag .no {
-        display: none;
-      }
-
-      h4 {
-        font-weight: normal;
-      }
-
-      h4 a {
-        color: white;
-      }
-
-      h4 span {
-        font-size: 110%;
-        font-weight: bold;
-      }
-
-    </style>
-  </head>
-  <body>
-    <h1 class="yes animated flip infinite">
-      <span style="color: #FF0000;">F</span><span style="color: #FF3300;">U</span><span style="color: #FFFF00;">C</span><span style="color: #00CC00;">K </span>
-      <span style="color: #009999;">Y</span><span style="color: #0099FF;">E</span><span style="color: #0000FF;">A</span><span style="color: #9900FF;">H</span><span style="color: #FF0099;">!</span>  </h1>
-
-      <h1 class="yes animated wobble infinite">Mongophös</h1>
-      <h1 class="no">FUCK NO!</h1>
-
-    <audio id="audio">
-      <source src="skopal21.mp3" type="audio/mpeg">
-    </audio>
-
-    <script type="text/javascript">
-      if(new Date().getDay() == 3) {
-        document.getElementsByTagName("body")[0].className = "untzdag"
-        document.getElementById('audio').play();
-      }
-
-    </script>
-  </body>
+	if(new Date().getDay() == 3) {
+		document.getElementById('ons').style.display = 'block';
+		document.getElementById('audio').play();
+		setTimeout(mix, 6300);
+	}
+	else {
+		setTimeout(function(){
+			document.body.style.backgroundColor = "black";
+			tick();
+		}, 6300);
+		document.getElementById('default').style.display = 'block';
+	}
+	function mix(){
+		if(document.body.style.backgroundColor == "white")
+			document.body.style.backgroundColor = "pink";
+		else
+			document.body.style.backgroundColor = "white";
+		setTimeout(mix, 200);
+	}
+	function tick(){
+    document.getElementById('date').innerHTML = countdown( nextUntz() ).toString();
+setTimeout(tick, 200);
+}
+function nextUntz() {
+var d = new Date();
+var t = d.getTime();
+switch(d.getDay()) {
+case 0: t = t + (3 * 86400000); break;
+case 1: t = t + (2 * 86400000); break;
+case 2: t = t + (1 * 86400000); break;
+case 4: t = t + (6 * 86400000); break;
+case 5: t = t + (5 * 86400000); break;
+case 6: t = t + (4 * 86400000); break;
+}
+  d.setTime(t);
+  return new Date("2015/03/25");
+return d;
+}
+</script>
+</body>
 </html>

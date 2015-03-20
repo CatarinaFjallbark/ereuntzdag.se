@@ -1,0 +1,242 @@
+@CHARSET "UTF-8";
+.fuckyes {
+	font-family: Sans-serif;
+	font-size: 100px;
+	color: black;
+	position: absolute;
+	text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    opacity: 0;
+	-webkit-animation: move linear 1.5s infinite;
+	animation: move linear 1.5s infinite;
+    -webkit-animation-delay: 6.3s;
+    animation-delay: 6.3s;
+}
+@-webkit-keyframes move {
+	 0%, 15%, 55%, 100% {
+	 font-size: 200px;
+	 color: purple;
+	 opacity: 1;
+	-webkit-transform: perspective(600px) translate3d(0, 0, 0) rotate(0deg) rotateY(0deg);
+	}
+	7% {
+	font-size: 300px;
+	color: aqua;
+	opacity: 0.5;
+	-webkit-transform: perspective(600px) translate3d(-200px, -240px, 0) rotate(-30deg) rotateY(-50deg);;
+	}
+	22% {
+	font-size: 300px;
+	color: fuchsia;
+	opacity: 0.5;
+	-webkit-transform: perspective(600px) translate3d(260px, -300px, 0) rotate(45deg) rotateY(50deg);
+	}
+	30% {
+	font-size: 200px;
+	color: lime;
+	opacity: 0.5;
+	-webkit-transform: perspective(600px) translate3d(260px, -100px, 0) rotate(100deg) rotateY(120deg);
+	}
+	45% {
+	font-size: 200px;
+	color: blue;
+	opacity: 0.5;
+	-webkit-transform: perspective(600px) translate3d(-260px, 100px, 0) rotate(-20deg) rotateY(0deg);
+	}
+	90% {
+	font-size: 400px;
+	color: pink;
+	-webkit-transform: perspective(500px) translate3d(0, -350px, 0) rotate(0deg) rotateY(720deg);
+	}
+	91% {
+	-webkit-transform: perspective(500px) translate3d(0, -350px, 0) rotate(0deg) rotateY(0deg);
+	}
+}
+@keyframes move {
+	 0%, 15%, 55%, 100% {
+	 font-size: 200px;
+	 color: purple;
+	 opacity: 1;
+	-webkit-transform: perspective(600px) translate3d(0, 0, 0) rotate(0deg) rotateY(0deg);
+	}
+	7% {
+	font-size: 300px;
+	color: aqua;
+	opacity: 0.5;
+	transform: perspective(600px) translate3d(-200px, -240px, 0) rotate(-30deg) rotateY(-50deg);;
+	}
+	22% {
+	font-size: 300px;
+	color: fuchsia;
+	opacity: 0.5;
+	transform: perspective(600px) translate3d(260px, -300px, 0) rotate(45deg) rotateY(50deg);
+	}
+	30% {
+	font-size: 200px;
+	color: lime;
+	opacity: 0.5;
+	transform: perspective(600px) translate3d(260px, -100px, 0) rotate(100deg) rotateY(120deg);
+	}
+	45% {
+	font-size: 200px;
+	color: blue;
+	opacity: 0.5;
+	transform: perspective(600px) translate3d(-260px, 100px, 0) rotate(-20deg) rotateY(0deg);
+	}
+	90% {
+	font-size: 400px;
+	color: pink;
+	transform: perspective(500px) translate3d(0, -350px, 0) rotate(0deg) rotateY(720deg);
+	}
+	91% {
+	transform: perspective(500px) translate3d(0, -350px, 0) rotate(0deg) rotateY(0deg);
+	}
+}
+.untz {
+	font-family: Sans-serif;
+	font-size: 100px;
+	color: black;
+	position: absolute;
+	text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    opacity: 0;
+	-webkit-animation: untz linear 1.5s infinite;
+	animation: untz linear 1.5s infinite;
+    -webkit-animation-delay: 21s;
+    animation-delay: 21s;
+}
+@-webkit-keyframes untz {
+	 0%, 20%, 40%, 60% {
+	 font-size: 200px;
+	 color: purple;
+	 opacity: 0;
+	-webkit-transform: perspective(600px) translate3d(0, 0, 0) rotate(-50deg);
+	}
+	10% {
+	font-size: 300px;
+	color: black;
+	opacity: 0.8;
+	-webkit-transform: perspective(600px) translate3d(-400px, -300px, 0) rotate(-60deg);
+	}
+	30% {
+	font-size: 300px;
+	color: black;
+	opacity: 0.8;
+	-webkit-transform: perspective(600px) translate3d(460px, -350px, 0) rotate(-50deg);
+	}
+	50% {
+	font-size: 200px;
+	color: black;
+	opacity: 0.8;
+	-webkit-transform: perspective(600px) translate3d(460px, -200px, 0) rotate(-80deg);
+	}
+}
+@keyframes untz {
+	 0%, 20%, 40%, 60% {
+	 font-size: 200px;
+	 color: purple;
+	 opacity: 0;
+	transform: perspective(600px) translate3d(0, 0, 0) rotate(-50deg);
+	}
+	10% {
+	font-size: 300px;
+	color: black;
+	opacity: 0.8;
+	transform: perspective(600px) translate3d(-400px, -300px, 0) rotate(-60deg);
+	}
+	30% {
+	font-size: 300px;
+	color: black;
+	opacity: 0.8;
+	transform: perspective(600px) translate3d(460px, -350px, 0) rotate(-50deg);
+	}
+	50% {
+	font-size: 200px;
+	color: black;
+	opacity: 0.8;
+	transform: perspective(600px) translate3d(460px, -200px, 0) rotate(-80deg);
+	}
+}
+.ereuntz {
+	font-family: Sans-serif;
+	font-size: 100px;
+	color: black;
+	position: absolute;
+	text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    opacity: 0;
+	-webkit-animation: opacity linear 6.3s;
+	animation: opacity linear 6.3s;
+}
+@-webkit-keyframes opacity {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+@keyframes opacity {
+	from {opacity: 1;}
+	to {opacity: 0;}
+}
+.fuckno {
+	font-family: Sans-serif;
+	font-size: 120px;
+	color: white;
+	position: absolute;
+	text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 90%;
+    margin: auto;
+    opacity: 0;
+    -webkit-animation: show linear 1s infinite;
+	animation: show linear 1s infinite;
+	-webkit-animation-delay: 6.3s;
+    animation-delay: 6.3s;
+}
+@-webkit-keyframes show {
+	from {opacity: 1; }
+	to {opacity: 1; }
+}
+@keyframes show {
+	from {opacity: 1; }
+	to {opacity: 1; }
+}
+div#date {
+	font-family: Sans-serif;
+	font-size: 60px;
+	color: white;
+	position: absolute;
+	text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    opacity: 0;
+    -webkit-animation: show linear 1s infinite;
+	animation: show linear 1s infinite;
+	-webkit-animation-delay: 6.3s;
+    animation-delay: 6.3s;
+}
