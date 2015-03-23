@@ -6,62 +6,86 @@
 <title>Ere untzdag?</title>
 </head>
 <body>
+<div id="counter" style="text-align:center;"><script type="text/javascript">
+document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-number-pages-views-statistics.html\"><img src=\"http://services.webestools.com/images/s12_0.gif\" class=\"cpt_pv_14118\"  alt=\"0\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_3.gif\" class=\"cpt_pv_14118\"  alt=\"3\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_1.gif\" class=\"cpt_pv_14118\"  alt=\"1\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_9.gif\" class=\"cpt_pv_14118\"  alt=\"9\" style=\"border:0px;\" /></a>");
+</script></div>
 <div id="default" style="display:none">
 	<div class="ereuntz">Ere untzdag?</div>
 	<div class="fuckno">FUCK NO!!</div>
-	<div id="date">Hej</div>
+	<div class="date"></div>
+<!--	<video id="defvid" loop src="video/jahuh.mp4" type="video/mp4" style="display:none"></video> !-->
 </div>
 <div id="ons" style="display:none">
 	<div class="untz">untz</div>
 	<div class="ereuntz">Ere untzdag?</div>
 	<div class="fuckyes">FUCK YEAH!!</div>
 </div>
-<audio id="audio">
-		<source src="skopal21.mp3" type="audio/mpeg">
-	</audio>
-	<script src="animation.js"></script>
-	<script src="countdown.js"></script>
-	<script type="text/javascript">
-
-	if(new Date().getDay() == 3) {
-		document.getElementById('ons').style.display = 'block';
-		document.getElementById('audio').play();
-		setTimeout(mix, 6300);
-	}
-	else {
-		setTimeout(function(){
-			document.body.style.backgroundColor = "black";
-			tick();
-		}, 6300);
-		document.getElementById('default').style.display = 'block';
-	}
-	function mix(){
-		if(document.body.style.backgroundColor == "white")
-			document.body.style.backgroundColor = "pink";
-		else
-			document.body.style.backgroundColor = "white";
-		setTimeout(mix, 200);
-	}
-	function tick(){
-    document.getElementById('date').innerHTML = countdown( nextUntz() ).toString();
-setTimeout(tick, 200);
+<div id="fre" style="display:none">
+	<div class="ereuntz">Ere untzdag?</div>
+	<div class="fuckno">FUCK NO!!</div>
+	<div class="date"></div>
+	<video id="frevid" loop src="video/friday.mp4" type="video/mp4" style="display:none"></video>
+</div>
+<audio id="audio" loop>
+	<source src="music/skopal21.mp3" type="audio/mpeg">
+</audio>
+<script type="text/javascript" src="countdown.js"></script>
+<script type="text/javascript">
+if(new Date().getDay() == 3) {
+	document.getElementById('ons').style.display = 'block';
+	document.getElementById('audio').play();
+	setTimeout(mix, 6300);
+}
+else if(new Date().getDay() == 5) {
+	setTimeout(function(){
+		document.body.style.backgroundColor = "black";
+		document.getElementById("frevid").play();
+		document.getElementById("frevid").style.display = 'block';
+		document.getElementById('counter').style.display = 'none';
+		tick();
+	}, 6300);
+	document.getElementById('fre').style.display = 'block';
+}
+else {
+	setTimeout(function(){
+		document.body.style.backgroundColor = "black";
+//		document.getElementById("defvid").play();
+//		document.getElementById("defvid").style.display = 'block';
+		document.getElementById('counter').style.display = 'none';
+		tick();
+	}, 6300);
+	document.getElementById('default').style.display = 'block';
+}
+function mix(){
+	document.getElementById('counter').style.display = 'none';
+	if(document.body.style.backgroundColor == "white")
+		document.body.style.backgroundColor = "pink";
+	else
+		document.body.style.backgroundColor = "white";
+	setTimeout(mix, 200);
+}
+function tick(){
+	var dates = document.getElementsByClassName("date");
+	for(var i=0; i<dates.length; i++)
+		dates[i].innerHTML = countdown( nextUntz() ).toString();
+	setTimeout(tick, 1000);
 }
 function nextUntz() {
-var d = new Date();
-var t = d.getTime();
-switch(d.getDay()) {
-case 0: t = t + (3 * 86400000); break;
-case 1: t = t + (2 * 86400000); break;
-case 2: t = t + (1 * 86400000); break;
-case 4: t = t + (6 * 86400000); break;
-case 5: t = t + (5 * 86400000); break;
-case 6: t = t + (4 * 86400000); break;
-}
-  d.setTime(t);
-  return new Date("2015/03/25");
-return d;
+	var d = new Date();
+	var t = d.getTime();
+	var ct = (((d.getHours() * 60 + d.getMinutes()) * 60) + d.getSeconds()) * 1000;
+	var oneDay = 86400000;
+	switch(d.getDay()) {
+		case 0: t = t + (3 * oneDay) - ct; break;
+		case 1: t = t + (2 * oneDay) - ct; break;
+		case 2: t = t + (1 * oneDay) - ct; break;
+		case 4: t = t + (6 * oneDay) - ct; break;
+		case 5: t = t + (5 * oneDay) - ct; break;
+		case 6: t = t + (4 * oneDay) - ct; break;
+	}
+	d.setTime(t);
+	return d;
 }
 </script>
-<div style="text-align:center;"><script type="text/javascript" src="http://services.webestools.com/cpt_pages_views/14118-12-4.js"></script></div>
 </body>
 </html>

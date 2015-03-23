@@ -1,10 +1,24 @@
 @CHARSET "UTF-8";
-.fuckyes {
+body {
 	font-family: Sans-serif;
-	font-size: 100px;
-	color: black;
-	position: absolute;
 	text-align: center;
+	background: pink;
+ 	color: white;
+  	text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 4px rgba(0,0,0,.2),
+               0 4px 7px rgba(0,0,0,.25),
+               0 7px 7px rgba(0,0,0,.2),
+               0 10px 10px rgba(0,0,0,.15);
+}
+.fuckyes {
+	font-size: 100px;
+	position: absolute;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
     top: 0;
     bottom: 0;
     left: 0;
@@ -99,11 +113,8 @@
 	}
 }
 .untz {
-	font-family: Sans-serif;
 	font-size: 100px;
-	color: black;
 	position: absolute;
-	text-align: center;
     top: 0;
     bottom: 0;
     left: 0;
@@ -170,11 +181,8 @@
 	}
 }
 .ereuntz {
-	font-family: Sans-serif;
 	font-size: 100px;
-	color: black;
 	position: absolute;
-	text-align: center;
     top: 0;
     bottom: 0;
     left: 0;
@@ -195,11 +203,9 @@
 	to {opacity: 0;}
 }
 .fuckno {
-	font-family: Sans-serif;
 	font-size: 120px;
 	color: white;
 	position: absolute;
-	text-align: center;
     top: 0;
     bottom: 0;
     left: 0;
@@ -221,12 +227,10 @@
 	from {opacity: 1; }
 	to {opacity: 1; }
 }
-div#date {
-	font-family: Sans-serif;
-	font-size: 60px;
+.date {
+	font-size: 40px;
 	color: white;
 	position: absolute;
-	text-align: center;
     top: 0;
     bottom: 0;
     left: 0;
@@ -240,3 +244,5 @@ div#date {
 	-webkit-animation-delay: 6.3s;
     animation-delay: 6.3s;
 }
+#defvid { width:100%; }
+#frevid { width:100%; }
