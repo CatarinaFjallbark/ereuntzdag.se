@@ -203,46 +203,36 @@ body {
 	to {opacity: 0;}
 }
 .fuckno {
+	opacity: 0;
 	font-size: 120px;
-	color: white;
-	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 50%;
-    height: 90%;
-    margin: auto;
-    opacity: 0;
-    -webkit-animation: show linear 1s infinite;
-	animation: show linear 1s infinite;
-	-webkit-animation-delay: 6.3s;
-    animation-delay: 6.3s;
+    -webkit-animation: show linear 5s infinite;
+	animation: show linear 5s infinite;
+	-webkit-animation-delay: 6.5s;
+    animation-delay: 6.5s;
 }
 @-webkit-keyframes show {
-	from {opacity: 1; }
-	to {opacity: 1; }
+	0%, 100% {opacity: 1; }
+	50% {opacity: 0.8; }
 }
 @keyframes show {
-	from {opacity: 1; }
-	to {opacity: 1; }
+	0%, 100% {opacity: 1; }
+	50% {opacity: 0.8; }
 }
 .date {
+	opacity: 0;
 	font-size: 40px;
-	color: white;
-	position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
-    margin: auto;
-    opacity: 0;
-    -webkit-animation: show linear 1s infinite;
-	animation: show linear 1s infinite;
-	-webkit-animation-delay: 6.3s;
-    animation-delay: 6.3s;
+    -webkit-animation: show linear 5s infinite;
+	animation: show linear 5s infinite;
+	-webkit-animation-delay: 6.5s;
+    animation-delay: 6.5s;
 }
 #defvid { width:100%; }
 #frevid { width:100%; }
+#myimage {
+	opacity: 0;
+	margin: auto;
+	-webkit-animation: show linear 5s infinite;
+	animation: show linear 5s infinite;
+	-webkit-animation-delay: 6.5s;
+    animation-delay: 6.5s;
+}

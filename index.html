@@ -12,8 +12,9 @@ document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-num
 <div id="default" style="display:none">
 	<div class="ereuntz">Ere untzdag?</div>
 	<div class="fuckno">FUCK NO!!</div>
-	<div class="date"></div>
-<!--	<video id="defvid" loop src="video/jahuh.mp4" type="video/mp4" style="display:none"></video> !-->
+	<div class="date"></div><br><br>
+	<img id="myimage" src="images/untzdag.jpg" alt="untzdag.jpg">
+<!--	<video id="defvid" loop src="video/jahuh.mp4" type="video/mp4" style="display:none"></video> -->
 </div>
 <div id="ons" style="display:none">
 	<div class="untz">untz</div>
@@ -47,6 +48,7 @@ else if(new Date().getDay() == 5) {
 	document.getElementById('fre').style.display = 'block';
 }
 else {
+	randomImage();
 	setTimeout(function(){
 		document.body.style.backgroundColor = "black";
 //		document.getElementById("defvid").play();
@@ -86,6 +88,20 @@ function nextUntz() {
 	d.setTime(t);
 	return d;
 }
+
+function randomImage() {
+	var theImage = document.getElementById('myimage');
+	
+	var imgArray = new Array('dafuq.jpg', 'untzdalf.jpg', 'dontalways.jpg',
+				'dontmiss.png', 'doyouevenuntz.jpg', 'mintu.jpg');
+
+		if (imgArray.length > 1) {
+			var imgIndex = Math.floor(Math.random() * imgArray.length);
+			var imgPath = 'images/' + imgArray[imgIndex];
+			theImage.src = imgPath;
+			theImage.alt = imgArray[imgIndex];
+		}
+	}
 </script>
 </body>
 </html>
