@@ -2,7 +2,7 @@
 body {
 	font-family: Sans-serif;
 	text-align: center;
-	background: pink;
+	background: black;
  	color: white;
   	text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
@@ -32,6 +32,7 @@ body {
     -webkit-animation-delay: 6.3s;
     animation-delay: 6.3s;
 }
+
 @-webkit-keyframes move {
 	 0%, 15%, 55%, 100% {
 	 font-size: 200px;
@@ -180,9 +181,23 @@ body {
 	transform: perspective(600px) translate3d(460px, -200px, 0) rotate(-80deg);
 	}
 }
+.button {
+	font-size: 50px;
+	margin-top: 130px;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 50%;
+		height: 30%;
+		margin: auto;
+		opacity: 0;
+	-webkit-animation: opacity linear 6.3s;
+	animation: opacity linear 6.3s;
+}
+
 .ereuntz {
 	font-size: 100px;
-	position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -193,6 +208,11 @@ body {
     opacity: 0;
 	-webkit-animation: opacity linear 6.3s;
 	animation: opacity linear 6.3s;
+}
+
+.ereuntz a{
+	text-decoration: none;
+	font-size: 40px;
 }
 @-webkit-keyframes opacity {
 	from {opacity: 1;}
