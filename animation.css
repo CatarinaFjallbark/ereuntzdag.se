@@ -210,10 +210,6 @@ body {
 	animation: opacity linear 6.3s;
 }
 
-.ereuntz a{
-	text-decoration: none;
-	font-size: 40px;
-}
 @-webkit-keyframes opacity {
 	from {opacity: 1;}
 	to {opacity: 0;}
@@ -246,11 +242,19 @@ body {
 	-webkit-animation-delay: 6.5s;
     animation-delay: 6.5s;
 }
-#defvid { width:100%; }
-#frevid { width:100%; }
+#defvid { position: absolute; width:100%; }
+#frevid { position: absolute; width:100%; }
 #myimage {
 	opacity: 0;
 	margin: auto;
+/* 	top: 0; */
+/*     bottom: 0; */
+/*     left: 0; */
+/*     right: 0; */
+    max-width:100%;
+    max-height:100%;
+    width: auto;
+    height: auto;
 	-webkit-animation: show linear 5s infinite;
 	animation: show linear 5s infinite;
 	-webkit-animation-delay: 6.5s;
