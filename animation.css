@@ -28,9 +28,9 @@ body {
     margin: auto;
     opacity: 0;
     -webkit-animation: move linear 2s infinite;
-    -webkit-animation-delay: 6.3s;
+    -webkit-animation-delay: 5.4s;
     animation: move linear 2s infinite;
-    animation-delay: 6.3s;
+    animation-delay: 5.4s;
 }
 @-webkit-keyframes move {
 	 0% {
@@ -237,8 +237,8 @@ body {
 		height: 30%;
 		margin: auto;
 		opacity: 0;
-	-webkit-animation: opacity linear 6.3s;
-	animation: opacity linear 6.3s;
+	-webkit-animation: opacity linear 5.4s;
+	animation: opacity linear 5.4s;
 }
 
 .ereuntz {
@@ -251,8 +251,8 @@ body {
     height: 30%;
     margin: auto;
     opacity: 0;
-	-webkit-animation: opacity linear 6.3s;
-	animation: opacity linear 6.3s;
+	-webkit-animation: opacity linear 5.4s;
+	animation: opacity linear 5.4s;
 }
 
 @-webkit-keyframes opacity {
@@ -304,4 +304,7 @@ body {
 	animation: show linear 5s infinite;
 	-webkit-animation-delay: 6.5s;
     animation-delay: 6.5s;
+}
+.image {
+	position: absolute; width:100%; height:auto;
 }
