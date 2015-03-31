@@ -6,8 +6,8 @@
 <title>Ere untzdag?</title>
 </head>
 <body>
-<!-- <div id="counter" style="text-align:center;"><script type="text/javascript">
-document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-number-pages-views-statistics.html\"><img src=\"http://services.webestools.com/images/s12_0.gif\" class=\"cpt_pv_14118\"  alt=\"0\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_3.gif\" class=\"cpt_pv_14118\"  alt=\"3\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_1.gif\" class=\"cpt_pv_14118\"  alt=\"1\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_9.gif\" class=\"cpt_pv_14118\"  alt=\"9\" style=\"border:0px;\" /></a>"); 
+<!-- <div id="counter" style="text-align:center;"><script type="text/javascript"> 
+// document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-number-pages-views-statistics.html\"><img src=\"http://services.webestools.com/images/s12_0.gif\" class=\"cpt_pv_14118\"  alt=\"0\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_3.gif\" class=\"cpt_pv_14118\"  alt=\"3\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_1.gif\" class=\"cpt_pv_14118\"  alt=\"1\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_9.gif\" class=\"cpt_pv_14118\"  alt=\"9\" style=\"border:0px;\" /></a>"); 
 </script></div> -->
 <div id="default" style="display:none">
 	<div class="ereuntz">Ere untzdag?</div>
@@ -20,12 +20,11 @@ document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-num
 	<div class="ereuntz">Ere Untzdag?</div>
 	<div class="fuckyes">FUCK YEAH!!</div>
 </div>
-<div id="lukas" style="display:none">
+<div id="sittning" style="display:none">
 	<div class="untz">untz</div>
-	<h4 class="ereuntz">Lukas Branda Bromé</h4>
-	<a class="button"href="https://www.youtube.com/watch?v=_DYdX3CvsM4&spfreload=10">Tryck inte här!</a><br>
-	<img class="ereuntz" src="images/luka.jpg"></img>
-	<div class="fuckyes">Lukas - PARTY!!</div>
+	<img class="ereuntz image" src="images/untz-sittning.jpg"></img>
+	<h4 class="ereuntz">T@GG@ <br> UNTZ-SITTNING!</h4>
+	<div class="fuckyes">UNTZ SITTNING!!</div>
 </div>
 <div id="fre" style="display:none">
 	<video id="frevid" loop src="video/friday.mp4" type="video/mpeg" style="display:none"></video>
@@ -38,8 +37,8 @@ document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-num
 <script type="text/javascript" src="countdown.js"></script>
 <script type="text/javascript">
 if(new Date().getDay() == 3) {
-	if(new Date().getHours() > 19){
-			document.getElementById('lukas').style.display = 'block';
+	if(new Date().getHours() >= 19){
+			document.getElementById('sittning').style.display = 'block';
 			document.getElementById('thats').play();
 	}else{
 		document.getElementById('ons').style.display = 'block';
