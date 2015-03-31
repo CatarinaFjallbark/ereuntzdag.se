@@ -79,7 +79,7 @@ function tick(){
 function nextUntz() {
 	var d = new Date();
 	var t = d.getTime();
-	var ct = ((((d.getHours() + 1) * 60 + d.getMinutes()) * 60) + d.getSeconds()) * 1000;
+	var ct = (((d.getHours() * 60 + d.getMinutes()) * 60) + d.getSeconds()) * 1000;
 	var oneDay = 86400000;
 	switch(d.getDay()) {
 		case 0: t = t + (3 * oneDay) - ct; break;
