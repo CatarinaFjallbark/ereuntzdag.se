@@ -6,8 +6,8 @@
 <title>Ere untzdag?</title>
 </head>
 <body>
-<!-- <div id="counter" style="text-align:center;"><script type="text/javascript"> 
-// document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-number-pages-views-statistics.html\"><img src=\"http://services.webestools.com/images/s12_0.gif\" class=\"cpt_pv_14118\"  alt=\"0\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_3.gif\" class=\"cpt_pv_14118\"  alt=\"3\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_1.gif\" class=\"cpt_pv_14118\"  alt=\"1\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_9.gif\" class=\"cpt_pv_14118\"  alt=\"9\" style=\"border:0px;\" /></a>"); 
+<!-- <div id="counter" style="text-align:center;"><script type="text/javascript">
+// document.write("<a href=\"http://www.webestools.com/pages-views-counter-free-number-pages-views-statistics.html\"><img src=\"http://services.webestools.com/images/s12_0.gif\" class=\"cpt_pv_14118\"  alt=\"0\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_3.gif\" class=\"cpt_pv_14118\"  alt=\"3\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_1.gif\" class=\"cpt_pv_14118\"  alt=\"1\" style=\"border:0px;\" /><img src=\"http://services.webestools.com/images/s12_9.gif\" class=\"cpt_pv_14118\"  alt=\"9\" style=\"border:0px;\" /></a>");
 </script></div> -->
 <div id="default" style="display:none">
 	<div class="ereuntz">Ere untzdag?</div>
@@ -16,15 +16,17 @@
 	<img id="myimage" src="images/untz-sittning.jpg" alt="We fucked up!" onmousedown="randomImage()">
 </div>
 <div id="ons" style="display:none">
-	<div class="untz">untz</div>
+	<iframe id="defvid" style="display:none" src="https://www.youtube.com/embed/Ayaz7NGYE7c?autoplay=1&amp;loop=1&amp;showinfo=0&amp;modestbranding=1&amp;disablekb=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+	<div id="untzu" class="untz">untz</div>
 	<div class="ereuntz">Ere Untzdag?</div>
-	<div class="fuckyes">FUCK YEAH!!</div>
+	<div class="ereuntz small">Click spacebar</div>
+	<div id="fuckyes" class="fuckyes">FUCK YEAH!!</div>
 </div>
 <div id="sittning" style="display:none">
 	<div class="untz">untz</div>
 	<img class="ereuntz image" src="images/untz-sittning.jpg"></img>
-	<h4 class="ereuntz">T@GG@ <br> UNTZ-SITTNING!</h4>
-	<div class="fuckyes">UNTZ SITTNING!!</div>
+	<h4 class="ereuntz">T@GG@</h4>
+	<div class="fuckyes">UNTZ!!</div>
 </div>
 <div id="fre" style="display:none">
 	<video id="frevid" loop src="video/friday.mp4" type="video/mpeg" style="display:none"></video>
@@ -33,13 +35,24 @@
 	<div class="date"></div>
 </div>
 <audio id="audio" src="music/skopal21.mp3" type="audio/mpeg" loop></audio>
-<audio id="thats" src="music/luka.mp3" type="audio/mpeg" loop></audio>
+<audio id="luka" src="music/luka.mp3" type="audio/mpeg" loop></audio>
 <script type="text/javascript" src="countdown.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
 <script type="text/javascript">
+$(window).keypress(function(e) {
+  if (e.keyCode == 0 || e.keyCode == 32) {
+		document.getElementById('defvid').style.display = 'block';
+		document.getElementById('fuckyes').style.display = 'none';
+		document.getElementById('untzu').style.display = 'none';
+		document.getElementById('audio').pause();
+  }
+});
 if(new Date().getDay() == 3) {
 	if(new Date().getHours() >= 19){
 			document.getElementById('sittning').style.display = 'block';
-			document.getElementById('thats').play();
+			document.getElementById('luka').play();
 	}else{
 		document.getElementById('ons').style.display = 'block';
 		document.getElementById('audio').play();
@@ -97,7 +110,7 @@ function randomImage() {
 
 	var imgArray = new Array('dafuq.jpg', 'untzdalf.jpg', 'dontalways.jpg',
 				'dontmiss.png', 'doyouevenuntz.jpg', 'mintu.jpg', 'luka.jpg', 'untz-sittning.jpg');
-	
+
 	if (imgArray.length > 1) {
 		var imgIndex = Math.floor(Math.random() * imgArray.length);
 		while(imgIndex == lastIndex) {
