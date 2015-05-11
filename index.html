@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="animation.css">
 <meta charset="UTF-8">
-<title>Ere untzdag?</title>
+<title>Ere fest?</title>
 </head>
 <body>
 <!-- <div id="counter" style="text-align:center;"><script type="text/javascript">
@@ -30,7 +30,7 @@
 </div>
 <!--<div id="fre" style="display:none">
 	<video id="frevid" loop src="https://www.dropbox.com/s/92l85kqryd2t2mj/friday.mp4" type="video/mpeg" style="display:none"></video>
-	<iframe id="defvid" style="display:none" src="https://www.youtube.com/embed/kfVsfOSbJY0?autoplay=0&amp;loop=1&amp;showinfo=0&amp;modestbranding=1&amp;disablekb=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe> 
+	<iframe id="defvid" style="display:none" src="https://www.youtube.com/embed/kfVsfOSbJY0?autoplay=0&amp;loop=1&amp;showinfo=0&amp;modestbranding=1&amp;disablekb=1&amp;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 	<div class="ereuntz">Ere Untzdag?</div>
 	<div class="ereuntz small">Click spacebar</div>
 	<div class="fuckno">FUCK NO!!</div>
@@ -52,14 +52,9 @@ $(window).keypress(function(e) {
   }
 });
 if(new Date().getDay() == 3) {
-	if(new Date().getHours() >= 19){
-			document.getElementById('sittning').style.display = 'block';
-			document.getElementById('luka').play();
-	}else{
 		document.getElementById('ons').style.display = 'block';
 		document.getElementById('audio').play();
-	}
-	setTimeout(mix, 6300);
+		setTimeout(mix, 6300);
 }
 /*else if(new Date().getDay() == 5) {
 	setTimeout(function(){
