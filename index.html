@@ -55,21 +55,11 @@
     		document.getElementById('audio').pause();
     	}
     });
-    if (new Date().getDay() == 3) {
+    if (new Date().getDay() == 2) {
     	document.getElementById('ons').style.display = 'block';
     	document.getElementById('audio').play();
     	setTimeout(mix, 6300);
-    }
-    /*else if(new Date().getDay() == 5) {
-    	setTimeout(function(){
-    		document.body.style.backgroundColor = "black";
-    		document.getElementById("frevid").play();
-    		document.getElementById("frevid").style.display = 'block';
-    		tick();
-    	}, 6300);
-    	document.getElementById('fre').style.display = 'block';
-    }*/
-    else {
+    }else {
     	setTimeout(function() {
     		document.body.style.backgroundColor = "black";
     		tick();
