@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>E D Fest</title>
+		<title>Mimimi</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -42,6 +42,8 @@
 
 		<script src="http://threejs.org/examples/fonts/helvetiker_regular.typeface.js"></script>
 
+    <audio id="audio" src="music/mimimi.mp3" type="audio/mpeg" loop></audio>
+
 			<script type="x-shader/x-vertex" id="vertexshader">
 
 				attribute float size;
@@ -79,15 +81,23 @@
 
 		<script>
 
-      var texts = ["E D Fest?", "Får man komma?", "Får man ta med sig nån?"];
+      var texts = ["Ereuntzdag.se",
+                   "Mimimi",
+                   "Mimimimi",
+                   "D E Fest!",
+                   "Mimimimimimimimi",
+                   "@ Cattaz balkong",
+                   "Mimimimimimimimimimimimi"];
 
-			var container;
+      var textTime = 1;
+      var speed = 200;
+      var rotationSpeed = 0.005;
+
+      var container;
 
 			var camera, scene, renderer;
 
 			var group, text, plane;
-
-			var speed = 50;
 
 			var pointLight;
 
@@ -110,6 +120,7 @@
 			animate();
 
 			function init() {
+        document.getElementById('audio').play();
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
 
@@ -519,7 +530,7 @@
 				attributes.pcolor.needsUpdate = true;
 
 				// Pretty cool effect if you enable this
-				particleCloud.rotation.y += 0.001;
+				particleCloud.rotation.y += rotationSpeed;
 
 				group.rotation.y += ( targetRotation - group.rotation.y ) * 0.05;
 
@@ -534,8 +545,8 @@
       var time = 0;
 
       function textTimer() {
-        time += delta;
-        if(time > 100) {
+        time += clock.getDelta();
+        if(time > textTime) {
           time = 0;
           if(i >= texts.length - 1) {
             i = 0;
@@ -592,6 +603,5 @@
         group.add( text );
       }
 		</script>
-
 	</body>
 </html>
